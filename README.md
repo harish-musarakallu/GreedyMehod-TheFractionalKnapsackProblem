@@ -10,11 +10,13 @@ partial packs) the team caries in order to maximize damage capability.
 
 # Design steps
 We can use greedy method applying the solution of “The Fractional Knapsack Problem”
-Step1: First Calculate the ratio of profit per weight for each of the weapon.
-Step2: Arrange (Sort) the Weapons in the decreasing order of profit per weight ratio.
-Step3: Loop through each weapon in this sorted array.
-Step4: Assign the MaxWeight allowed to the variable rc (remaining capacity)
-Step5: Refer below flow diagram
+* Step1: First Calculate the ratio of profit per weight for each of the weapon.
+* Step2: Arrange (Sort) the Weapons in the decreasing order of profit per weight ratio.
+* Step3: Loop through each weapon in this sorted array.
+* Step4: Assign the MaxWeight allowed to the variable rc (remaining capacity)
+* Step5: Refer below flow diagram
+
+```
 Sorting ()
 for i <- 1  to n
 	if (w[i] <= rc)
@@ -26,8 +28,11 @@ for i <- 1  to n
 totaldamage <- totaldamage + d[i] * faction[i]
 rc <- 0
 end for
+```
 
 # Time complexity
+```
 Time complexity for sorting is O(NlogN)
 Time complexity for the ‘for’ loop is O(n) as it has to loop through all the weapons in the list.
 So, Time complexity is O(NlogN)
+```
